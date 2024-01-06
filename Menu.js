@@ -71,28 +71,51 @@ const menu = [
       img: "./Images/item-9.jpeg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
+    {
+      id: 10,
+      title: "Steak Dinner",
+      category: "dinner",
+      price: 36.99,
+      img: "./Images/item-10.jpeg",
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
   ];
 
   const container = document.querySelector('.container');
-  const filterBtns = document.querySelectorAll('.filter-btn')
+  const btnContainer = document.querySelector(".btn-container");
 
   //Load the items
   window.addEventListener('DOMContentLoaded', () => {
     displayMenu(menu);
-  });
 
-  //Filter the items
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        const category = e.currentTarget.dataset.id;
-        const menuCategory = menu.filter((menuItem) => {
-            if(category === menuItem.category)
-                return menuItem;
+    //Here we find out the different categories in our json document and form an array accordingly
+    const categories = menu.reduce((values, item) => {
+        if(!values.includes(item.category))
+            values.push(item.category);
+        return values;
+    }, ['all']);
+
+    //Here we built the buttons according to the unique categories we got
+    const categoryBtns = categories.map((category) => {
+        return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
+    }).join('');
+    
+    btnContainer.innerHTML = categoryBtns;
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    //Filter the items
+    filterBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const category = e.currentTarget.dataset.id;
+            const menuCategory = menu.filter((menuItem) => {
+                if(category === menuItem.category)
+                    return menuItem;
+            });
+            if(category ==='all')
+                displayMenu(menu);
+            else
+                displayMenu(menuCategory);        
         });
-        if(category ==='all')
-            displayMenu(menu);
-        else
-            displayMenu(menuCategory);        
     });
   });
 

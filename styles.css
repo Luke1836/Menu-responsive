@@ -134,12 +134,14 @@ body {
     display: inline;
     margin-inline-end: 1.5rem;
     padding: var(--padding-btn);
-    width: 5rem;
+    width: 5.5rem;
     border-radius: 8px;
     border: solid 3px goldenrod;
     color: goldenrod;
     background-color: #f8f3f3;
     transition-property: all;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .filter-btn:hover {
@@ -150,7 +152,7 @@ body {
     transition-delay: 0ms;
     transition-timing-function: ease-in-out;
     padding: 0.75rem;
-    width: 5.25rem;
+    width: 5.75rem;
     border-radius: 12px;
 }
 
@@ -162,6 +164,9 @@ body {
     text-align: center;
 }
 
+.footer {
+    height: 8vh;
+}
 @media screen and (min-width:768px) {
     .container {
         grid-template-columns: 1fr 1fr;
