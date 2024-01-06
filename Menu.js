@@ -74,9 +74,27 @@ const menu = [
   ];
 
   const container = document.querySelector('.container');
-
+  const filterBtns = document.querySelectorAll('.filter-btn')
   window.addEventListener('DOMContentLoaded', () => {
-    let card = menu.map((item)=>{
+    displayMenu(menu);
+  });
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const category = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter((menuItem) => {
+            if(category === menuItem.category)
+                return menuItem;
+        });
+        if(category ==='all')
+            displayMenu(menu);
+        else
+            displayMenu(menuCategory);        
+    });
+  });
+
+  function displayMenu(menuItem) {
+    let card = menuItem.map((item)=>{
         return `<div class="image-container">
                     <img src=${item.img} alt="item-1" loading="lazy" class="img">
                     <div class="content">
@@ -87,4 +105,4 @@ const menu = [
     });
     card = card.join('');  //Joins all the strings togehter to form one large string
     container.innerHTML = card;
-  });
+  }
