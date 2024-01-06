@@ -88,7 +88,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(200px, auto);
-    padding: 4rem;
     padding-left: 6rem;
     padding-right: 6rem;
     gap: 1rem;
@@ -120,6 +119,14 @@ body {
     border-radius: 10px;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 12vh;
+}
 .content {
     display: flex;
     flex-flow: column nowrap;
