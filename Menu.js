@@ -80,7 +80,7 @@ const menu = [
         return `<div class="image-container">
                     <img src=${item.img} alt="item-1" loading="lazy" class="img">
                     <div class="content">
-                        <header class="item-heading"><h3>${item.title}</h3>&nbsp;-&nbsp;<h3 id="price">${item.price}}</h3></header>
+                        <header class="item-heading"><h3>${item.title}</h3>&nbsp;-&nbsp;<h3 id="price">${item.price}</h3></header>
                         <p class="content">${item.desc}</p>
                     </div>
                 </div>`
