@@ -75,10 +75,13 @@ const menu = [
 
   const container = document.querySelector('.container');
   const filterBtns = document.querySelectorAll('.filter-btn')
+
+  //Load the items
   window.addEventListener('DOMContentLoaded', () => {
     displayMenu(menu);
   });
 
+  //Filter the items
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         const category = e.currentTarget.dataset.id;
@@ -93,6 +96,7 @@ const menu = [
     });
   });
 
+  //Function to display the Menu items
   function displayMenu(menuItem) {
     let card = menuItem.map((item)=>{
         return `<div class="image-container">
