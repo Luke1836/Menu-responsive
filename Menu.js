@@ -72,3 +72,19 @@ const menu = [
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
   ];
+
+  const container = document.querySelector('.container');
+
+  window.addEventListener('DOMContentLoaded', () => {
+    let card = menu.map((item)=>{
+        return `<div class="image-container">
+                    <img src=${item.img} alt="item-1" loading="lazy" class="img">
+                    <div class="content">
+                        <header class="item-heading"><h3>${item.title}</h3>&nbsp;-&nbsp;<h3 id="price">${item.price}}</h3></header>
+                        <p class="content">${item.desc}</p>
+                    </div>
+                </div>`
+    });
+    card = card.join('');  //Joins all the strings togehter to form one large string
+    container.innerHTML = card;
+  });
