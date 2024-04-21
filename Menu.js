@@ -111,7 +111,7 @@ const menu = [
                 if(category === menuItem.category)
                     return menuItem;
             });
-            if(category ==='all')
+            if(category === 'all')
                 displayMenu(menu);
             else
                 displayMenu(menuCategory);        
