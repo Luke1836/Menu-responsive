@@ -55,6 +55,8 @@ body {
     font: clamp(1.25rem,3.5vh,3rem);
     background-color: var(--body-color);
 }
+
+
 /* Utility Classes */
 .underline {
     height: 0.3rem;
