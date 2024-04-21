@@ -130,6 +130,6 @@ const menu = [
                     </div>
                 </div>`
     });
-    card = card.join('');  //Joins all the strings togehter to form one large string
+    card = card.join('');  //Joins all the strings together to form one large string
     container.innerHTML = card;
   }

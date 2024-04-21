@@ -99,6 +99,7 @@ body {
 .item-heading {
     display: flex;
     flex-flow: row nowrap;
+    text-transform: capitalize;
 }
 
 .img {
@@ -167,6 +168,7 @@ body {
 .footer {
     height: 8vh;
 }
+
 @media screen and (min-width:768px) {
     .container {
         grid-template-columns: 1fr 1fr;
