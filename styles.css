@@ -128,9 +128,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     width: 100%;
-    height: 12vh;
+    height: auto;
+    margin: 1rem;
+    gap: 0.35rem;
 }
 
 .filter-btn {
