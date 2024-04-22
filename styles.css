@@ -17,6 +17,7 @@ button {
 }
 
 /* Variables */
+
 :root {
     --heading-color: #111;
     --ff: 'Roboto';
@@ -73,6 +74,18 @@ body {
     top: -9999999px;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: slategray;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
 
 /* END OF UTILITY CLASSES */
 
