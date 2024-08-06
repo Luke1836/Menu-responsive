@@ -1,3 +1,3 @@
-Restaurant Menu <br />
-This is a small front-end project using HTML, CSS, and javascript.<br />
-It is a menu site that is user-friendly.
+# Restaurant Menu 
+- This small front-end project uses HTML, CSS, and Javascript.
+- It is a user-friendly menu site.
